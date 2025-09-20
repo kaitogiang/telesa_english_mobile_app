@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:telesa_english_app/core/config/app_event_bus.dart';
 import 'package:telesa_english_app/core/events/unfocus_keyboard_event.dart';
+import 'package:telesa_english_app/features/home/presentation/widgets/app_container.dart';
 import 'package:telesa_english_app/features/shared/presentation/base/main_app_wrapper.dart';
-
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final mainNavigatorKey = GlobalKey<NavigatorState>();
@@ -25,12 +25,18 @@ final goRouterConfig = GoRouter(
             return Scaffold(
               body: SafeArea(
                 child: Container(
-                  constraints: BoxConstraints(
-                    minHeight: double.infinity,
-                    minWidth: double.infinity,
+                  color: Colors.green,
+                  height: 200,
+                  margin: EdgeInsets.only(top: 100),
+                  padding: EdgeInsets.all(10),
+                  constraints: BoxConstraints(minWidth: double.infinity),
+                  child: BannerCard(
+                    child: Container(
+                      // color: Colors.blue,
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
                   ),
-                  color: Colors.red,
-                  child: Center(child: Text('Hello this is the fist time', style: TextStyle(color: Colors.black),)),
                 ),
               ),
             );
