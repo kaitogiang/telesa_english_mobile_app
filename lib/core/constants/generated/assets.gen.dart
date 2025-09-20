@@ -47,6 +47,11 @@ class AppAssets {
     'assets/icons/clock_icon.svg',
   );
 
+  /// File path: assets/icons/error_icon.svg
+  static const SvgGenImage iconsErrorIcon = SvgGenImage(
+    'assets/icons/error_icon.svg',
+  );
+
   /// File path: assets/icons/filled_star_icon.svg
   static const SvgGenImage iconsFilledStarIcon = SvgGenImage(
     'assets/icons/filled_star_icon.svg',
@@ -158,6 +163,7 @@ class AppAssets {
     iconsCheckCircleIcon,
     iconsCircleIcon,
     iconsClockIcon,
+    iconsErrorIcon,
     iconsFilledStarIcon,
     iconsFilterIcon,
     iconsFireIcon,

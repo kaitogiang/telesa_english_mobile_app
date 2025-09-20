@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:telesa_english_app/core/constants/app_sizes.dart';
-import 'package:telesa_english_app/core/extensions/double_extension.dart';
+import 'package:telesa_english_app/core/constants/app_color.dart';
+import 'package:telesa_english_app/telesa_english.dart';
 
 class BaseCard extends StatelessWidget {
   const BaseCard({
@@ -14,28 +14,74 @@ class BaseCard extends StatelessWidget {
   final Widget content;
   final Widget header;
 
+  BorderRadiusGeometry _getHeaderBorderRadius() {
+    final size = Radius.circular(AppSizes.s10);
+    final defaultSize = Radius.zero;
+    return BorderRadius.only(
+      topLeft: size,
+      topRight: isHorizontal ? defaultSize : size,
+      bottomLeft: isHorizontal ? size : defaultSize,
+    );
+  }
+
+  Widget clipHeader() {
+    return Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+      width: double.infinity,
+      height: 120,
+      child: Stack(
+        children: [
+          ClipRRect(borderRadius: _getHeaderBorderRadius(), child: header),
+          Positioned(
+            top: AppSizes.s8,
+            left: AppSizes.s8,
+            child: Container(
+              decoration: BoxDecoration(
+                color: AppColors.accentColor.withValues(alpha: 0.2),
+                borderRadius: AppSizes.s8.allBorderRadius,
+              ),
+              padding: AppSizes.s8.allPadding,
+              child: AppAssets.iconsBookmarkIcon.svg(
+                width: 15,
+                colorFilter: ColorFilter.mode(
+                  AppColors.whiteColor,
+                  BlendMode.srcIn,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: AppSizes.s10.allBorderRadius),
-      child: Builder(
-        builder: (context) {
-          if (isHorizontal) {
-            return Row(
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: 250, maxWidth: 200),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: AppSizes.s10.allBorderRadius,
+        ),
+        child: Builder(
+          builder: (context) {
+            if (isHorizontal) {
+              return Row(
+                children: <Widget>[
+                  clipHeader(),
+                  Expanded(child: content),
+                ],
+              );
+            }
+
+            return Column(
               children: <Widget>[
-                header,
+                clipHeader(),
                 Expanded(child: content),
               ],
             );
-          }
-
-          return Column(
-            children: <Widget>[
-              header,
-              Expanded(child: content),
-            ],
-          );
-        },
+          },
+        ),
       ),
     );
   }
