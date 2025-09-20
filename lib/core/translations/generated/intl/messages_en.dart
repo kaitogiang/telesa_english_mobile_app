@@ -39,8 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "createYourAccount": MessageLookupByLibrary.simpleMessage(
       "Create your Account",
     ),
+    "englishForKids": MessageLookupByLibrary.simpleMessage("English for Kids"),
     "englishLanguage": MessageLookupByLibrary.simpleMessage("English"),
+    "englishLessonForAdults": MessageLookupByLibrary.simpleMessage(
+      "English lesson for Adults",
+    ),
     "experience": MessageLookupByLibrary.simpleMessage("Experience"),
+    "favoriteMentor": MessageLookupByLibrary.simpleMessage("Favorite Mentor"),
     "fieldIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "This field cannot be empty.",
     ),
@@ -85,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "vietnameseLanguage": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
     "weHaveSentEmailWithLink": MessageLookupByLibrary.simpleMessage(
       "We have sent an email that contains a link to reset your password",
     ),

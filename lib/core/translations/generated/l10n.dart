@@ -398,6 +398,41 @@ class AppTranslate {
   String get seeMore {
     return Intl.message('See more', name: 'seeMore', desc: '', args: []);
   }
+
+  /// `English for Kids`
+  String get englishForKids {
+    return Intl.message(
+      'English for Kids',
+      name: 'englishForKids',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English lesson for Adults`
+  String get englishLessonForAdults {
+    return Intl.message(
+      'English lesson for Adults',
+      name: 'englishLessonForAdults',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorite Mentor`
+  String get favoriteMentor {
+    return Intl.message(
+      'Favorite Mentor',
+      name: 'favoriteMentor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get viewAll {
+    return Intl.message('View All', name: 'viewAll', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppTranslate> {
