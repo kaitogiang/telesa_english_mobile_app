@@ -26,9 +26,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "agreeString": MessageLookupByLibrary.simpleMessage("I agree to the "),
     "andString": MessageLookupByLibrary.simpleMessage(" and "),
-    "appName": MessageLookupByLibrary.simpleMessage("SoundX app"),
+    "appName": MessageLookupByLibrary.simpleMessage("Telesa English app"),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
+    "bookNow": MessageLookupByLibrary.simpleMessage("Book now"),
     "cancelButton": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "cast": MessageLookupByLibrary.simpleMessage("Cast"),
     "checkYourEmailTitle": MessageLookupByLibrary.simpleMessage(
       "Check your mail",
     ),
@@ -38,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Create your Account",
     ),
     "englishLanguage": MessageLookupByLibrary.simpleMessage("English"),
+    "experience": MessageLookupByLibrary.simpleMessage("Experience"),
     "fieldIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "This field cannot be empty.",
     ),
@@ -50,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "Invalid email format.",
     ),
+    "listening": MessageLookupByLibrary.simpleMessage("Listening"),
     "loginEmailHintText": MessageLookupByLibrary.simpleMessage("Email"),
     "loginPasswordHintText": MessageLookupByLibrary.simpleMessage("Password"),
     "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
@@ -68,18 +72,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please check your email.",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "reading": MessageLookupByLibrary.simpleMessage("Reading"),
     "resetYourPassword": MessageLookupByLibrary.simpleMessage(
       "Reset your password",
     ),
     "signedUpName": MessageLookupByLibrary.simpleMessage("Name"),
+    "skill": MessageLookupByLibrary.simpleMessage("Skill"),
     "somethingWrong": MessageLookupByLibrary.simpleMessage(
       "An error occurred. Please try again.",
     ),
+    "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "vietnameseLanguage": MessageLookupByLibrary.simpleMessage("Vietnamese"),
     "weHaveSentEmailWithLink": MessageLookupByLibrary.simpleMessage(
       "We have sent an email that contains a link to reset your password",
     ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to my app"),
+    "writing": MessageLookupByLibrary.simpleMessage("Writing"),
   };
 }

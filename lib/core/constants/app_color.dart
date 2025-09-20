@@ -29,6 +29,8 @@ class AppColors {
 
   static Color get successColor => Color(0xFF22C55E);
 
+  static Color get yellowColor => Color(0xFFED9916);
+
   static Color darken(Color color, [double amount = .1]) {
     final hsl = HSLColor.fromColor(color);
     return hsl

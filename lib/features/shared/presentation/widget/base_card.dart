@@ -29,15 +29,14 @@ class BaseCard extends StatelessWidget {
       return BoxConstraints(maxHeight: 250, maxWidth: 200);
     }
 
-    return BoxConstraints(maxWidth: double.infinity, maxHeight: 150);
+    return BoxConstraints(maxWidth: double.infinity, maxHeight: 160);
   }
 
   Widget _getContent() {
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        minHeight: double.infinity,
-        minWidth: double.infinity,
-      ),
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      padding: AppSizes.s8.horizontalPadding,
       child: content,
     );
   }
@@ -92,6 +91,7 @@ class BaseCard extends StatelessWidget {
             }
 
             return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 clipHeader(),
                 Expanded(child: _getContent()),

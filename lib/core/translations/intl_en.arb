@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appName": "SoundX app",
+  "appName": "Telesa English app",
   "hello": "Hello",
   "welcome": "Welcome to my app",
   "@hello": {
@@ -52,5 +52,13 @@
   "backToLogin": "Back to Login",
   "checkYourEmailTitle": "Check your mail",
   "pleaseCheckYourMail": "Please check your email.",
-  "weHaveSentEmailWithLink": "We have sent an email that contains a link to reset your password"
+  "weHaveSentEmailWithLink": "We have sent an email that contains a link to reset your password",
+  "experience": "Experience",
+  "skill": "Skill",
+  "speaking": "Speaking",
+  "reading": "Reading",
+  "writing": "Writing",
+  "listening": "Listening",
+  "bookNow": "Book now",
+  "cast": "Cast"
 }

@@ -54,9 +54,14 @@ class AppTranslate {
     return Localizations.of<AppTranslate>(context, AppTranslate);
   }
 
-  /// `SoundX app`
+  /// `Telesa English app`
   String get appName {
-    return Intl.message('SoundX app', name: 'appName', desc: '', args: []);
+    return Intl.message(
+      'Telesa English app',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Hello`
@@ -347,6 +352,46 @@ class AppTranslate {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Experience`
+  String get experience {
+    return Intl.message('Experience', name: 'experience', desc: '', args: []);
+  }
+
+  /// `Skill`
+  String get skill {
+    return Intl.message('Skill', name: 'skill', desc: '', args: []);
+  }
+
+  /// `Speaking`
+  String get speaking {
+    return Intl.message('Speaking', name: 'speaking', desc: '', args: []);
+  }
+
+  /// `Reading`
+  String get reading {
+    return Intl.message('Reading', name: 'reading', desc: '', args: []);
+  }
+
+  /// `Writing`
+  String get writing {
+    return Intl.message('Writing', name: 'writing', desc: '', args: []);
+  }
+
+  /// `Listening`
+  String get listening {
+    return Intl.message('Listening', name: 'listening', desc: '', args: []);
+  }
+
+  /// `Book now`
+  String get bookNow {
+    return Intl.message('Book now', name: 'bookNow', desc: '', args: []);
+  }
+
+  /// `Cast`
+  String get cast {
+    return Intl.message('Cast', name: 'cast', desc: '', args: []);
   }
 }
 
