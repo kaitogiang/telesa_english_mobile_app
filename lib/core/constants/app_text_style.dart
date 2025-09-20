@@ -1,7 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+enum TextFontStyle { openSans, poppins }
+
 class AppTextStyle {
+  static TextStyle _getTextStyle({
+    required double fontSize,
+    required FontWeight fontWeight,
+    Color textColor = Colors.black,
+    TextDecoration decoration = TextDecoration.none,
+    double? height,
+    double? letterSpacing,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) {
+    final baseStyle = TextStyle(
+      color: textColor,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      decoration: decoration,
+      height: height,
+      letterSpacing: letterSpacing,
+    );
+
+    switch (fontType) {
+      case TextFontStyle.poppins:
+        return GoogleFonts.poppins(textStyle: baseStyle);
+      case TextFontStyle.openSans:
+      default:
+        return GoogleFonts.openSans(textStyle: baseStyle);
+    }
+  }
+
   static TextStyle textSize10({
     Color textColor = Colors.black,
     double fontSize = 10.0,
@@ -9,18 +38,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize12({
     Color textColor = Colors.black,
@@ -29,18 +57,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize14({
     Color textColor = Colors.black,
@@ -49,18 +76,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize16({
     Color textColor = Colors.black,
@@ -69,18 +95,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize18({
     Color textColor = Colors.black,
@@ -89,18 +114,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize20({
     Color textColor = Colors.black,
@@ -109,18 +133,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize24({
     Color textColor = Colors.black,
@@ -129,18 +152,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize32({
     Color textColor = Colors.black,
@@ -149,18 +171,17 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 
   static TextStyle textSize40({
     Color textColor = Colors.black,
@@ -169,16 +190,15 @@ class AppTextStyle {
     TextDecoration decoration = TextDecoration.none,
     double? height,
     double? letterSpacing,
-  }) {
-    return GoogleFonts.raleway(
-      textStyle: TextStyle(
-        color: textColor,
+    TextFontStyle fontType = TextFontStyle.openSans,
+  }) =>
+      _getTextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
+        textColor: textColor,
         decoration: decoration,
         height: height,
         letterSpacing: letterSpacing,
-      ),
-    );
-  }
+        fontType: fontType,
+      );
 }
