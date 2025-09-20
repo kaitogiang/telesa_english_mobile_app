@@ -1,0 +1,56 @@
+{
+  "@@locale": "en",
+  "appName": "SoundX app",
+  "hello": "Hello",
+  "welcome": "Welcome to my app",
+  "@hello": {
+    "description": "an simple example about using this"
+  },
+  "pageLoginButtonTitle": "Login",
+  "@pageLoginButtonTitle": {
+    "description": "Login title for the button in login page"
+  },
+  "pageRegisterButtonTitle": "Sign Up",
+  "@pageRegisterButtonTitle": {
+    "description": "Sign up title for the button in register page"
+  },
+  "loginEmailHintText": "Email",
+  "loginPasswordHintText": "Password",
+  "forgotPassword": "Forgot Password?",
+  "loginWithGoogle": "Login With Google",
+  "or": "Or",
+  "englishLanguage": "English",
+  "vietnameseLanguage": "Vietnamese",
+  "createYourAccount": "Create your Account",
+  "signedUpName": "Name",
+  "confirmPassword": "Confirm Password",
+  "termsOfService": "Terms of Service",
+  "privacyPolicy": "Privacy Policy",
+  "iAgreeTerms": "I agree to the {terms} and {policy}",
+  "@iAgreeTerms": {
+    "description": "Terms and policy for the app",
+    "placeholders": {
+      "terms": {
+        "type": "String"
+      },
+      "policy": {
+        "type": "String"
+      }
+    }
+  },
+  "agreeString": "I agree to the ",
+  "andString": " and ",
+  "invalidEmail": "Invalid email format.",
+  "fieldIsNotEmpty": "This field cannot be empty.",
+  "passwordAtLeast8": "Password must be at least 8 characters long.",
+  "passwordNotMatch": "Passwords do not match",
+  "somethingWrong": "An error occurred. Please try again.",
+  "fillAllRequired": "Please fill in all required fields.",
+  "resetYourPassword": "Reset your password",
+  "cancelButton": "Cancel",
+  "continueButton": "Continue",
+  "backToLogin": "Back to Login",
+  "checkYourEmailTitle": "Check your mail",
+  "pleaseCheckYourMail": "Please check your email.",
+  "weHaveSentEmailWithLink": "We have sent an email that contains a link to reset your password"
+}
