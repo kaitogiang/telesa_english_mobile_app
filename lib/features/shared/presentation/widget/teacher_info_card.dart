@@ -47,7 +47,11 @@ class TeacherInfoCard extends StatelessWidget {
   Widget _cast(BuildContext context) {
     return Row(
       children: <Widget>[
-        Text('${context.tr.cast}: ', style: _titleStyle()),
+        Text(
+          '${context.tr.cast}: ',
+          style: _titleStyle(),
+          overflow: TextOverflow.ellipsis,
+        ),
         Expanded(child: Text('300.000'.formatCurrency())),
       ],
     );
@@ -109,6 +113,7 @@ class TeacherInfoCard extends StatelessWidget {
         children: <Widget>[
           Text(
             'Minseo Kim',
+            overflow: TextOverflow.ellipsis,
             style: AppTextStyle.textSize16(
               fontType: TextFontStyle.poppins,
               fontWeight: FontWeight.w600,
