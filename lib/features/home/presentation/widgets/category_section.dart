@@ -45,9 +45,10 @@ class CategorySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildHeader(context),
-        Expanded(child: child),
+        Flexible(child: child),
       ],
     );
   }

@@ -39,6 +39,7 @@ class BaseCard extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       padding: AppSizes.s8.horizontalPadding,
+      color: Colors.red,
       child: content,
     );
   }
