@@ -61,6 +61,7 @@ class _MyAppView extends WidgetView<MyApp, _MyAppState> {
         home: Scaffold(
           body: SafeArea(
             child: BaseCard(
+              isHorizontal: false,
               header: AppNetworkImage(
                 url:
                     'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww',

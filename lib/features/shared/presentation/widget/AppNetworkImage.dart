@@ -19,7 +19,7 @@ class AppNetworkImage extends StatelessWidget {
     return Image.network(
       url,
       width: width ?? double.infinity,
-      height: height,
+      height: height ?? double.infinity,
       fit: BoxFit.cover,
       errorBuilder: (context, error, stackTrace) {
         return Container(

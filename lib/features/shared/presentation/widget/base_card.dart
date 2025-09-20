@@ -24,10 +24,28 @@ class BaseCard extends StatelessWidget {
     );
   }
 
+  BoxConstraints _getBoxConstrains() {
+    if (!isHorizontal) {
+      return BoxConstraints(maxHeight: 250, maxWidth: 200);
+    }
+
+    return BoxConstraints(maxWidth: double.infinity, maxHeight: 150);
+  }
+
+  Widget _getContent() {
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minHeight: double.infinity,
+        minWidth: double.infinity,
+      ),
+      child: content,
+    );
+  }
+
   Widget clipHeader() {
     return SizedBox(
-      width: double.infinity,
-      height: 120,
+      width: isHorizontal ? 200 : double.infinity,
+      height: !isHorizontal ? 120 : double.infinity,
       child: Stack(
         children: [
           ClipRRect(borderRadius: _getHeaderBorderRadius(), child: header),
@@ -57,7 +75,7 @@ class BaseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: 250, maxWidth: 200),
+      constraints: _getBoxConstrains(),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: AppSizes.s10.allBorderRadius,
@@ -67,8 +85,8 @@ class BaseCard extends StatelessWidget {
             if (isHorizontal) {
               return Row(
                 children: <Widget>[
-                  clipHeader(),
-                  Expanded(child: content),
+                  SizedBox(width: 150, child: clipHeader()),
+                  Expanded(child: _getContent()),
                 ],
               );
             }
@@ -76,7 +94,7 @@ class BaseCard extends StatelessWidget {
             return Column(
               children: <Widget>[
                 clipHeader(),
-                Expanded(child: content),
+                Expanded(child: _getContent()),
               ],
             );
           },
