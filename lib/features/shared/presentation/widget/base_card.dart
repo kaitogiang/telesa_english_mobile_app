@@ -25,8 +25,7 @@ class BaseCard extends StatelessWidget {
   }
 
   Widget clipHeader() {
-    return Container(
-      decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+    return SizedBox(
       width: double.infinity,
       height: 120,
       child: Stack(
