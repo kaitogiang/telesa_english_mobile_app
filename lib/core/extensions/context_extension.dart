@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:soundx/core/translations/generated/l10n.dart';
+import 'package:telesa_english_app/telesa_english.dart';
 
 extension ContextExtension on BuildContext {
   AppTranslate get tr => AppTranslate.of(this);

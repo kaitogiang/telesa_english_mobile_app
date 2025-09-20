@@ -27,6 +27,11 @@ class AppAssets {
     'assets/icons/book_icon.svg',
   );
 
+  /// File path: assets/icons/bookmark_icon.svg
+  static const SvgGenImage iconsBookmarkIcon = SvgGenImage(
+    'assets/icons/bookmark_icon.svg',
+  );
+
   /// File path: assets/icons/check_circle_icon.svg
   static const SvgGenImage iconsCheckCircleIcon = SvgGenImage(
     'assets/icons/check_circle_icon.svg',
@@ -149,6 +154,7 @@ class AppAssets {
   static List<dynamic> get values => [
     iconsBellIcon,
     iconsBookIcon,
+    iconsBookmarkIcon,
     iconsCheckCircleIcon,
     iconsCircleIcon,
     iconsClockIcon,
