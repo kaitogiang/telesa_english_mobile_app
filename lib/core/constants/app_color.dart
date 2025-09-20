@@ -17,11 +17,18 @@ class AppColors {
 
   static Color get linkColor => Color(0xFF1E90FF);
 
-  static Color get secondaryColor => Color(0xFFDDEBE5);
-
   static Color get grey => Colors.grey;
 
   static Color get lightGrey => Colors.grey.shade200;
+
+  static Color get primaryColor => Color(0xFF9C0059);
+
+  static Color get secondaryColor => Color(0xFFFF4FA3);
+
+  static Color get accentColor => Color(0xFF2A74E4);
+
+  static Color get successColor => Color(0xFF22C55E);
+
 
   static Color darken(Color color, [double amount = .1]) {
     final hsl = HSLColor.fromColor(color);

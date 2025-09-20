@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:soundx/core/config/app_event_bus.dart';
-import 'package:soundx/core/events/unfocus_keyboard_event.dart';
-import 'package:soundx/features/auth/presentation/pages/check_email_screen.dart';
-import 'package:soundx/features/auth/presentation/pages/forgot_password_page.dart';
-import 'package:soundx/features/auth/presentation/pages/login_page.dart';
-import 'package:soundx/features/auth/presentation/pages/sign_up_page.dart';
-import 'package:soundx/features/music_library/presentation/music_library_page.dart';
-import 'package:soundx/features/shared/presentation/base/main_app_wrapper.dart';
+import 'package:telesa_english_app/core/config/app_event_bus.dart';
+import 'package:telesa_english_app/core/events/unfocus_keyboard_event.dart';
+import 'package:telesa_english_app/features/shared/presentation/base/main_app_wrapper.dart';
+
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final mainNavigatorKey = GlobalKey<NavigatorState>();
 final goRouterConfig = GoRouter(
   navigatorKey: rootNavigatorKey,
-  initialLocation: '/login',
+  initialLocation: '/home',
   routes: [
     ShellRoute(
       navigatorKey: mainNavigatorKey,
@@ -23,38 +19,21 @@ final goRouterConfig = GoRouter(
       observers: [CustomObserver()],
       routes: [
         GoRoute(
-          path: '/login',
-          name: 'login',
+          path: '/home',
+          name: 'home',
           builder: (context, state) {
-            return LoginPage();
-          },
-        ),
-        GoRoute(
-          path: '/sign-up',
-          name: 'signUp',
-          builder: (context, state) {
-            return SignUpPage();
-          },
-        ),
-        GoRoute(
-          path: '/forgot-password',
-          name: 'forgotPassword',
-          builder: (context, state) {
-            return ForgotPasswordPage();
-          },
-        ),
-        GoRoute(
-          path: '/check-email',
-          name: 'checkEmail',
-          builder: (context, state) {
-            return CheckYourEmailPage();
-          },
-        ),
-        GoRoute(
-          path: '/',
-          name: 'musicLibrary',
-          builder: (context, state) {
-            return MusicLibraryPage();
+            return Scaffold(
+              body: SafeArea(
+                child: Container(
+                  constraints: BoxConstraints(
+                    minHeight: double.infinity,
+                    minWidth: double.infinity,
+                  ),
+                  color: Colors.red,
+                  child: Center(child: Text('Hello this is the fist time', style: TextStyle(color: Colors.black),)),
+                ),
+              ),
+            );
           },
         ),
       ],

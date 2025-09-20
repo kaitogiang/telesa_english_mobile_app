@@ -17,12 +17,59 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class AppAssets {
   const AppAssets._();
 
-  /// File path: .env
-  static const String aEnv = '.env';
+  /// File path: assets/icons/bell_icon.svg
+  static const SvgGenImage iconsBellIcon = SvgGenImage(
+    'assets/icons/bell_icon.svg',
+  );
+
+  /// File path: assets/icons/book_icon.svg
+  static const SvgGenImage iconsBookIcon = SvgGenImage(
+    'assets/icons/book_icon.svg',
+  );
+
+  /// File path: assets/icons/bookmark_icon.svg
+  static const SvgGenImage iconsBookmarkIcon = SvgGenImage(
+    'assets/icons/bookmark_icon.svg',
+  );
+
+  /// File path: assets/icons/check_circle_icon.svg
+  static const SvgGenImage iconsCheckCircleIcon = SvgGenImage(
+    'assets/icons/check_circle_icon.svg',
+  );
+
+  /// File path: assets/icons/circle_icon.svg
+  static const SvgGenImage iconsCircleIcon = SvgGenImage(
+    'assets/icons/circle_icon.svg',
+  );
+
+  /// File path: assets/icons/clock_icon.svg
+  static const SvgGenImage iconsClockIcon = SvgGenImage(
+    'assets/icons/clock_icon.svg',
+  );
+
+  /// File path: assets/icons/filled_star_icon.svg
+  static const SvgGenImage iconsFilledStarIcon = SvgGenImage(
+    'assets/icons/filled_star_icon.svg',
+  );
+
+  /// File path: assets/icons/filter_icon.svg
+  static const SvgGenImage iconsFilterIcon = SvgGenImage(
+    'assets/icons/filter_icon.svg',
+  );
+
+  /// File path: assets/icons/fire_icon.svg
+  static const SvgGenImage iconsFireIcon = SvgGenImage(
+    'assets/icons/fire_icon.svg',
+  );
 
   /// File path: assets/icons/google_icon.svg
   static const SvgGenImage iconsGoogleIcon = SvgGenImage(
     'assets/icons/google_icon.svg',
+  );
+
+  /// File path: assets/icons/graduation_icon.svg
+  static const SvgGenImage iconsGraduationIcon = SvgGenImage(
+    'assets/icons/graduation_icon.svg',
   );
 
   /// File path: assets/icons/mdi_eye.svg
@@ -33,6 +80,56 @@ class AppAssets {
   /// File path: assets/icons/mdi_hide.svg
   static const SvgGenImage iconsMdiHide = SvgGenImage(
     'assets/icons/mdi_hide.svg',
+  );
+
+  /// File path: assets/icons/puzzle_icon.svg
+  static const SvgGenImage iconsPuzzleIcon = SvgGenImage(
+    'assets/icons/puzzle_icon.svg',
+  );
+
+  /// File path: assets/icons/radio_icon.svg
+  static const SvgGenImage iconsRadioIcon = SvgGenImage(
+    'assets/icons/radio_icon.svg',
+  );
+
+  /// File path: assets/icons/schedule_icon.svg
+  static const SvgGenImage iconsScheduleIcon = SvgGenImage(
+    'assets/icons/schedule_icon.svg',
+  );
+
+  /// File path: assets/icons/search_icon.svg
+  static const SvgGenImage iconsSearchIcon = SvgGenImage(
+    'assets/icons/search_icon.svg',
+  );
+
+  /// File path: assets/icons/speak_icon.svg
+  static const SvgGenImage iconsSpeakIcon = SvgGenImage(
+    'assets/icons/speak_icon.svg',
+  );
+
+  /// File path: assets/icons/star_sharp_icon.svg
+  static const SvgGenImage iconsStarSharpIcon = SvgGenImage(
+    'assets/icons/star_sharp_icon.svg',
+  );
+
+  /// File path: assets/icons/student_icon.svg
+  static const SvgGenImage iconsStudentIcon = SvgGenImage(
+    'assets/icons/student_icon.svg',
+  );
+
+  /// File path: assets/icons/user_circle_icon.svg
+  static const SvgGenImage iconsUserCircleIcon = SvgGenImage(
+    'assets/icons/user_circle_icon.svg',
+  );
+
+  /// File path: assets/icons/verify_icon.svg
+  static const SvgGenImage iconsVerifyIcon = SvgGenImage(
+    'assets/icons/verify_icon.svg',
+  );
+
+  /// File path: assets/icons/write_icon.svg
+  static const SvgGenImage iconsWriteIcon = SvgGenImage(
+    'assets/icons/write_icon.svg',
   );
 
   /// File path: assets/png/check.png
@@ -55,10 +152,29 @@ class AppAssets {
 
   /// List of all assets
   static List<dynamic> get values => [
-    aEnv,
+    iconsBellIcon,
+    iconsBookIcon,
+    iconsBookmarkIcon,
+    iconsCheckCircleIcon,
+    iconsCircleIcon,
+    iconsClockIcon,
+    iconsFilledStarIcon,
+    iconsFilterIcon,
+    iconsFireIcon,
     iconsGoogleIcon,
+    iconsGraduationIcon,
     iconsMdiEye,
     iconsMdiHide,
+    iconsPuzzleIcon,
+    iconsRadioIcon,
+    iconsScheduleIcon,
+    iconsSearchIcon,
+    iconsSpeakIcon,
+    iconsStarSharpIcon,
+    iconsStudentIcon,
+    iconsUserCircleIcon,
+    iconsVerifyIcon,
+    iconsWriteIcon,
     pngCheck,
     pngSoundxLogo,
     pngUkFlag,
