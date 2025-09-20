@@ -8,11 +8,13 @@ class BaseCard extends StatelessWidget {
     required this.header,
     required this.content,
     this.isHorizontal = false,
+    this.headerHeight,
   });
 
   final bool isHorizontal;
   final Widget content;
   final Widget header;
+  final double? headerHeight;
 
   BorderRadiusGeometry _getHeaderBorderRadius() {
     final size = Radius.circular(AppSizes.s10);
@@ -44,7 +46,7 @@ class BaseCard extends StatelessWidget {
   Widget clipHeader() {
     return SizedBox(
       width: isHorizontal ? 200 : double.infinity,
-      height: !isHorizontal ? 120 : double.infinity,
+      height: !isHorizontal ? (headerHeight ?? 120) : double.infinity,
       child: Stack(
         children: [
           ClipRRect(borderRadius: _getHeaderBorderRadius(), child: header),

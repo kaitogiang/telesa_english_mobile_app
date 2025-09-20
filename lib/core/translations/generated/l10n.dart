@@ -393,6 +393,11 @@ class AppTranslate {
   String get cast {
     return Intl.message('Cast', name: 'cast', desc: '', args: []);
   }
+
+  /// `See more`
+  String get seeMore {
+    return Intl.message('See more', name: 'seeMore', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppTranslate> {

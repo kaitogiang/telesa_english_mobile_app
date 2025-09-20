@@ -9,6 +9,7 @@ import 'package:telesa_english_app/core/extensions/double_extension.dart';
 import 'package:telesa_english_app/core/extensions/string_extension.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/app_network_image.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/base_card.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/rating_with_action.dart';
 
 class TeacherInfoCard extends StatelessWidget {
   const TeacherInfoCard({super.key, this.isHorizontal = false});
@@ -53,49 +54,6 @@ class TeacherInfoCard extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         Expanded(child: Text('300.000'.formatCurrency())),
-      ],
-    );
-  }
-
-  Widget _rateAndBook(BuildContext context) {
-    Widget rate() {
-      return Row(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          AppAssets.iconsFilledStarIcon.svg(
-            width: 10,
-            colorFilter: ColorFilter.mode(
-              AppColors.yellowColor,
-              BlendMode.srcIn,
-            ),
-          ),
-          AppSizes.s4.horizontalGap,
-          Text(
-            '4.9 (12)',
-            style: AppTextStyle.textSize12(
-              textColor: AppColors.grey.toDarker(.2),
-            ),
-          ),
-        ],
-      );
-    }
-
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        rate(),
-        GestureDetector(
-          onTap: () {
-            print('Tap book now');
-          },
-          child: Text(
-            context.tr.bookNow,
-            style: AppTextStyle.textSize12(
-              textColor: AppColors.primaryColor,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
       ],
     );
   }
@@ -178,7 +136,12 @@ class TeacherInfoCard extends StatelessWidget {
           if (isHorizontal) AppSizes.s4.verticalGap,
           if (isHorizontal) _cast(context),
           AppSizes.s4.verticalGap,
-          _rateAndBook(context),
+          RatingWithAction(
+            ratingValue: '4.6',
+            ratingCount: '12',
+            onAction: () {},
+            actionButtonTitle: context.tr.bookNow,
+          ),
         ],
       ),
     );
