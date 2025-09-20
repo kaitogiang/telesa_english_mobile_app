@@ -31,6 +31,7 @@ final goRouterConfig = GoRouter(
                   padding: EdgeInsets.all(10),
                   constraints: BoxConstraints(minWidth: double.infinity),
                   child: BannerCard(
+                    isLinearGradient: true,
                     child: Container(
                       // color: Colors.blue,
                       width: double.infinity,

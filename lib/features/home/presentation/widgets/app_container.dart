@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
+import 'package:telesa_english_app/core/extensions/color_extension.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
 class BannerCard extends StatelessWidget {
@@ -8,11 +9,13 @@ class BannerCard extends StatelessWidget {
     required this.child,
     this.isOutline = false,
     this.backgroundColor,
+    this.isLinearGradient = false,
   });
 
   final Widget child;
   final bool isOutline;
   final Color? backgroundColor;
+  final bool isLinearGradient;
 
   BoxDecoration _getBoxDecoration() {
     return BoxDecoration(
@@ -21,6 +24,16 @@ class BannerCard extends StatelessWidget {
       border: isOutline
           ? Border.all(color: AppColors.primaryColor, width: 2)
           : null,
+      gradient: !isLinearGradient
+          ? null
+          : LinearGradient(
+              colors: [
+                AppColors.primaryColor.toLighter(),
+                AppColors.secondaryColor.toLighter(),
+              ],
+              begin: Alignment.centerLeft,
+              end: Alignment(2, 0),
+            ),
     );
   }
 
