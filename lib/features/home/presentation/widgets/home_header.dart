@@ -19,7 +19,7 @@ class HomeHeader extends StatelessWidget {
             width: 50,
             height: 50,
             url:
-                '0https://dimensions.edu.vn/public/upload/2025/01/avatar-nobita-cute-1.webp',
+                'https://dimensions.edu.vn/public/upload/2025/01/avatar-nobita-cute-1.webp',
           ),
         ),
         AppSizes.s10.horizontalGap,

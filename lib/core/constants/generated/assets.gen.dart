@@ -150,6 +150,11 @@ class AppAssets {
   /// File path: assets/png/check.png
   static const AssetGenImage pngCheck = AssetGenImage('assets/png/check.png');
 
+  /// File path: assets/png/human_image.png
+  static const AssetGenImage pngHumanImage = AssetGenImage(
+    'assets/png/human_image.png',
+  );
+
   /// File path: assets/png/soundx_logo.png
   static const AssetGenImage pngSoundxLogo = AssetGenImage(
     'assets/png/soundx_logo.png',
@@ -194,6 +199,7 @@ class AppAssets {
     iconsVerifyIcon,
     iconsWriteIcon,
     pngCheck,
+    pngHumanImage,
     pngSoundxLogo,
     pngUkFlag,
     pngVietnamFlag,
