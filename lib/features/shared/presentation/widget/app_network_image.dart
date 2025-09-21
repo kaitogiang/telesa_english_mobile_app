@@ -23,6 +23,8 @@ class AppNetworkImage extends StatelessWidget {
       fit: BoxFit.cover,
       errorBuilder: (context, error, stackTrace) {
         return Container(
+          width: width,
+          height: height,
           alignment: Alignment.center,
           color: AppColors.grey.withValues(alpha: 0.3),
           child: AppAssets.iconsErrorIcon.svg(width: AppSizes.s32),

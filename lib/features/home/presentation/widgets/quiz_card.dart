@@ -6,7 +6,7 @@ import 'package:telesa_english_app/core/extensions/color_extension.dart';
 import 'package:telesa_english_app/core/extensions/context_extension.dart';
 import 'package:telesa_english_app/core/extensions/double_extension.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/app_container.dart';
-import 'package:telesa_english_app/features/shared/presentation/widget/CustomButton.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/custom_button.dart';
 
 class QuizCard extends StatelessWidget {
   const QuizCard({

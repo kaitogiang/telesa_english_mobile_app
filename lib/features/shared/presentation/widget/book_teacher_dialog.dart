@@ -3,7 +3,7 @@ import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/constants/app_sizes.dart';
 import 'package:telesa_english_app/core/constants/app_text_style.dart';
 import 'package:telesa_english_app/core/extensions/double_extension.dart';
-import 'package:telesa_english_app/features/shared/presentation/widget/CustomButton.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/custom_button.dart';
 
 class BookTeacherDialog extends StatelessWidget {
   const BookTeacherDialog({super.key});
