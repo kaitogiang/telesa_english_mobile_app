@@ -5,6 +5,7 @@
 1. Clone repo
 2. Run `flutter pub get`
 3. Run `flutter run`
+4. Run `dart pub run build_runner build --delete-conflicting-outputs`
 
 ## What’s Done
 
