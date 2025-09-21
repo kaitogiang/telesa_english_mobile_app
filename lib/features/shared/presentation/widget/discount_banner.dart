@@ -34,7 +34,7 @@ class DiscountBanner extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               title,
-                              textAlign: TextAlign.justify,
+                              textAlign: TextAlign.left,
                               style: AppTextStyle.textSize18(
                                 fontWeight: FontWeight.w600,
                                 textColor: AppColors.whiteColor,
