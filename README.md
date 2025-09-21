@@ -17,7 +17,7 @@
 - Booking screen
 - Progress tracking screen
 - Notifications
-- State management (Bloc/Provider not yet implemented)
+- State management (Bloc not yet implemented)
 - API integration (currently using static mock data)
 - Admin Dashboard (Web/Laravel)
 
@@ -25,7 +25,7 @@
 
 - Add missing screens (Booking, Progress, Notifications)
 - Implement Bloc for state management
-- Connect to Laravel API (stub)
+- Connect to API (stub)
 - Build Admin Dashboard for teachers, revenue, transactions
 - Add notification flow & booking confirmation
 
