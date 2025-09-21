@@ -52,6 +52,11 @@ class AppAssets {
     'assets/icons/clock_outline_icon.svg',
   );
 
+  /// File path: assets/icons/dropdown_arrow_icon.svg
+  static const SvgGenImage iconsDropdownArrowIcon = SvgGenImage(
+    'assets/icons/dropdown_arrow_icon.svg',
+  );
+
   /// File path: assets/icons/error_icon.svg
   static const SvgGenImage iconsErrorIcon = SvgGenImage(
     'assets/icons/error_icon.svg',
@@ -169,6 +174,7 @@ class AppAssets {
     iconsCircleIcon,
     iconsClockIcon,
     iconsClockOutlineIcon,
+    iconsDropdownArrowIcon,
     iconsErrorIcon,
     iconsFilledStarIcon,
     iconsFilterIcon,
