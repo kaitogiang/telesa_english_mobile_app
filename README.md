@@ -31,5 +31,5 @@
 
 ## Notes
 
-This submission focuses on **UI prototyping** first.  
-The structure is ready for extending with Bloc and API integration.
+Due to limited time, I focused on the UI part first.
+The project is already structured so logic and API can be added easily.
