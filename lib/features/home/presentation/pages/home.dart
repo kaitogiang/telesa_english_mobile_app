@@ -61,9 +61,9 @@ class Home extends StatelessWidget {
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: List<Widget>.generate(4, (index) {
-                  return LessonCard(isShowLevelChip: false);
-                }),
+                children: getKidsLessons().map((lesson) {
+                  return LessonCard(lessonEntity: lesson);
+                }).toList(),
               ),
             ),
           ),
@@ -74,9 +74,9 @@ class Home extends StatelessWidget {
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: List<Widget>.generate(4, (index) {
-                  return LessonCard();
-                }),
+                children: getAdultLessons().map((lesson) {
+                  return LessonCard(lessonEntity: lesson);
+                }).toList(),
               ),
             ),
           ),

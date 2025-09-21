@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/constants/app_text_style.dart';
 import 'package:telesa_english_app/core/extensions/context_extension.dart';
+import 'package:telesa_english_app/features/home/domain/entities/lesson_entity.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/app_network_image.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/base_card.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/rating_with_action.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
 class LessonCard extends StatelessWidget {
-  const LessonCard({super.key, this.isShowLevelChip = true});
+  const LessonCard({super.key, this.isShowLevelChip = true, this.lessonEntity});
 
   final bool isShowLevelChip;
+  final LessonEntity? lessonEntity;
 
   Widget _buildLevelChip(String title) {
     return Container(
@@ -65,10 +67,7 @@ class LessonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseCard(
       headerHeight: 100,
-      header: AppNetworkImage(
-        url:
-            'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww',
-      ),
+      header: AppNetworkImage(url: lessonEntity?.imageUrl ?? ''),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
@@ -79,18 +78,18 @@ class LessonCard extends StatelessWidget {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  _buildLevelChip('Advance'),
-                  _buildDuration('21:55:31'),
+                  _buildLevelChip(lessonEntity?.level ?? 'Unknown'),
+                  _buildDuration(lessonEntity?.duration ?? '00:00:00'),
                 ],
               );
             },
           ),
           AppSizes.s4.verticalGap,
-          _buildLessonName('Practical English for Work & Life'),
-          _buildLessonDesc('Learn basic vocabulary and common phrases'),
+          _buildLessonName(lessonEntity?.name ?? '--'),
+          _buildLessonDesc(lessonEntity?.description ?? '--'),
           RatingWithAction(
-            ratingValue: '4.6',
-            ratingCount: '12',
+            ratingValue: '${lessonEntity?.ratingValue ?? 0.0}',
+            ratingCount: '${lessonEntity?.ratingCount ?? 0}',
             onAction: () {},
             actionButtonTitle: context.tr.seeMore,
           ),
