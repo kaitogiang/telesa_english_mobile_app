@@ -9,6 +9,7 @@ import 'package:telesa_english_app/features/home/presentation/widgets/quiz_card.
 import 'package:telesa_english_app/features/home/presentation/widgets/streak_card.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/discount_banner.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/group_section.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/teacher_info_card.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
 class Home extends StatelessWidget {
@@ -76,6 +77,25 @@ class Home extends StatelessWidget {
                   return LessonCard();
                 }),
               ),
+            ),
+          ),
+          AppSizes.s10.verticalGap,
+          CategorySection(
+            headerTitle: 'Favorite Mentor',
+            onAction: () {},
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 0,
+                // mainAxisSpacing: 5,
+                childAspectRatio: 1 / 1.3,
+              ),
+              itemCount: 4,
+              itemBuilder: (context, index) {
+                return TeacherInfoCard();
+              },
             ),
           ),
         ],

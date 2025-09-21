@@ -22,23 +22,26 @@ class CourseProgressCard extends StatelessWidget {
           Row(
             children: [
               AppAssets.pngHumBookImage.image(width: 60, height: 60),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Text(
-                    'Practical English for Work & Life',
-                    style: AppTextStyle.textSize16(
-                      fontWeight: FontWeight.bold,
-                      textColor: AppColors.whiteColor,
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Practical English for Work & Life',
+                      style: AppTextStyle.textSize16(
+                        fontWeight: FontWeight.bold,
+                        textColor: AppColors.whiteColor,
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Learn basic vocabulary and common phrases',
-                    style: AppTextStyle.textSize14(
-                      textColor: AppColors.whiteColor,
+                    Text(
+                      'Learn basic vocabulary and common phrases',
+                      style: AppTextStyle.textSize14(
+                        textColor: AppColors.whiteColor,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
