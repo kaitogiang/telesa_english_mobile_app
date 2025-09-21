@@ -35,6 +35,14 @@ class AppColors {
 
   static Color get darkBlueGrey => Color(0xFF698C92);
 
+  static Color get berryPink => const Color(0xFFAE3A7D);
+
+  static Color get softIndigo => const Color(0xFF9196EB);
+
+  static Color get deepIndigo => const Color(0xFF6E78EB);
+
+  static Color get flameOrange => const Color(0xFFFF6B00);
+
   static Color darken(Color color, [double amount = .1]) {
     final hsl = HSLColor.fromColor(color);
     return hsl

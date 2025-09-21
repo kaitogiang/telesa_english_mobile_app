@@ -433,6 +433,41 @@ class AppTranslate {
   String get viewAll {
     return Intl.message('View All', name: 'viewAll', desc: '', args: []);
   }
+
+  /// `Your Score`
+  String get yourScore {
+    return Intl.message('Your Score', name: 'yourScore', desc: '', args: []);
+  }
+
+  /// `Quiz`
+  String get quiz {
+    return Intl.message('Quiz', name: 'quiz', desc: '', args: []);
+  }
+
+  /// `10 minutes`
+  String get minutes10 {
+    return Intl.message('10 minutes', name: 'minutes10', desc: '', args: []);
+  }
+
+  /// `10 questions`
+  String get questions10 {
+    return Intl.message(
+      '10 questions',
+      name: 'questions10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Word Puzzles & Vocabulary`
+  String get wordPuzzle {
+    return Intl.message(
+      'Word Puzzles & Vocabulary',
+      name: 'wordPuzzle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppTranslate> {

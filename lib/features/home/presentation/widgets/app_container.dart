@@ -3,8 +3,8 @@ import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/extensions/color_extension.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
-class BannerCard extends StatelessWidget {
-  const BannerCard({
+class AppContainer extends StatelessWidget {
+  const AppContainer({
     super.key,
     required this.child,
     this.isOutline = false,

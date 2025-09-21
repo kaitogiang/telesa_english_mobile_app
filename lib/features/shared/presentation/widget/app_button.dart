@@ -20,6 +20,7 @@ class AppButton extends StatefulWidget {
   final double borderRadius;
   final Color? borderColor;
   final Widget? leadingIcon;
+
   const AppButton({
     super.key,
     required this.label,
@@ -119,45 +120,49 @@ class _AppButtonController extends State<AppButton> {
 //Separate UI only
 class _AppButtonView extends WidgetView<AppButton, _AppButtonController> {
   const _AppButtonView(super.state, {super.key});
+
   @override
   Widget build(BuildContext context) {
     final config = state.appButtonConfig;
 
-    return AnimatedContainer(
-      duration: AppDuration.to50Milis(),
-      curve: Curves.linear,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          padding: config.padding,
-          fixedSize: Size.fromWidth(double.maxFinite),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius),
-            side: BorderSide(color: config.borderColor, width: 2),
+    return SizedBox(
+      height: 50,
+      child: AnimatedContainer(
+        duration: AppDuration.to50Milis(),
+        curve: Curves.linear,
+        child: TextButton(
+          style: TextButton.styleFrom(
+            padding: config.padding,
+            fixedSize: Size.fromWidth(double.maxFinite),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(widget.borderRadius),
+              side: BorderSide(color: config.borderColor, width: 2),
+            ),
+            overlayColor: AppColors.transparent,
+            backgroundBuilder: (context, states, child) {
+              return DecoratedBox(
+                decoration: BoxDecoration(color: config.backgroundColor),
+                child: child,
+              );
+            },
           ),
-          overlayColor: AppColors.transparent,
-          backgroundBuilder: (context, states, child) {
-            return DecoratedBox(
-              decoration: BoxDecoration(color: config.backgroundColor),
-              child: child,
-            );
-          },
-        ),
-        onPressed: widget.onPressed,
-        child: SizedBox(
-          width: double.maxFinite,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Text(widget.label, style: config.labelStyle),
-              Builder(
-                builder: (context) {
-                  if (widget.leadingIcon != null) {
-                    return Positioned(left: 0, child: widget.leadingIcon!);
-                  }
-                  return const SizedBox.shrink();
-                },
-              ),
-            ],
+          onPressed: widget.onPressed,
+          child: SizedBox(
+            width: double.maxFinite,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Text(widget.label, style: config.labelStyle),
+                Builder(
+                  builder: (context) {
+                    if (widget.leadingIcon != null) {
+                      return Positioned(left: 0, child: widget.leadingIcon!);
+                    }
+                    return const SizedBox.shrink();
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Login With Google",
     ),
+    "minutes10": MessageLookupByLibrary.simpleMessage("10 minutes"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "pageLoginButtonTitle": MessageLookupByLibrary.simpleMessage("Login"),
     "pageRegisterButtonTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
@@ -77,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please check your email.",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "questions10": MessageLookupByLibrary.simpleMessage("10 questions"),
+    "quiz": MessageLookupByLibrary.simpleMessage("Quiz"),
     "reading": MessageLookupByLibrary.simpleMessage("Reading"),
     "resetYourPassword": MessageLookupByLibrary.simpleMessage(
       "Reset your password",
@@ -95,6 +98,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "We have sent an email that contains a link to reset your password",
     ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to my app"),
+    "wordPuzzle": MessageLookupByLibrary.simpleMessage(
+      "Word Puzzles & Vocabulary",
+    ),
     "writing": MessageLookupByLibrary.simpleMessage("Writing"),
+    "yourScore": MessageLookupByLibrary.simpleMessage("Your Score"),
   };
 }
