@@ -3,31 +3,33 @@ import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/constants/app_sizes.dart';
 import 'package:telesa_english_app/core/constants/app_text_style.dart';
 import 'package:telesa_english_app/core/extensions/double_extension.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/CustomButton.dart';
 
 class BookTeacherDialog extends StatelessWidget {
   const BookTeacherDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: Row(
-        children: [
-          DateSelectorItem(
-            dayName: 'Thu',
-            dayValue: '04',
-            slot: 0,
-            isBooked: true,
-          ),
-          DateSelectorItem(dayName: 'Thu', dayValue: '04', slot: 3),
-          DateSelectorItem(
-            dayName: 'Thu',
-            dayValue: '04',
-            slot: 4,
-            isSelected: true,
-          ),
-        ],
-      ),
-    );
+    // return IntrinsicHeight(
+    //   child: Row(
+    //     children: [
+    //       DateSelectorItem(
+    //         dayName: 'Thu',
+    //         dayValue: '04',
+    //         slot: 0,
+    //         isBooked: true,
+    //       ),
+    //       DateSelectorItem(dayName: 'Thu', dayValue: '04', slot: 3),
+    //       DateSelectorItem(
+    //         dayName: 'Thu',
+    //         dayValue: '04',
+    //         slot: 4,
+    //         isSelected: true,
+    //       ),
+    //     ],
+    //   ),
+    // );
+    return StatusLegend();
   }
 }
 
@@ -124,3 +126,104 @@ class DateSelectorItem extends StatelessWidget {
     );
   }
 }
+
+class TimeSelector extends StatelessWidget {
+  const TimeSelector({super.key});
+
+  Widget _buildCardByStatus({
+    required String title,
+    bool isSelected = false,
+    bool isBooked = false,
+  }) {
+    Color? textColor;
+    Color? backgroundColor;
+    if (isSelected) {
+      textColor = AppColors.whiteColor;
+      backgroundColor = AppColors.primaryColor;
+    } else if (isBooked) {
+      textColor = AppColors.blackColor.withValues(alpha: .5);
+      backgroundColor = AppColors.blackColor.withValues(alpha: 0.04);
+    }
+    return CustomButton(
+      label: title,
+      isShowBorder: !isSelected && !isBooked,
+      backgroundColor: backgroundColor,
+      textColor: textColor,
+      borderRadius: AppSizes.s8,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          _buildCardByStatus(title: '08:00 am', isSelected: true),
+          _buildCardByStatus(title: '09:00 am', isBooked: true),
+          _buildCardByStatus(title: '10:00 am'),
+          _buildCardByStatus(title: '11:00 am'),
+          _buildCardByStatus(title: '01:00 pm', isBooked: true),
+          _buildCardByStatus(title: '02:00 pm', isSelected: true),
+          _buildCardByStatus(title: '03:00 pm'),
+        ],
+      ),
+    );
+  }
+}
+
+class StatusLegend extends StatelessWidget {
+  const StatusLegend({super.key});
+
+  Widget _buildItem({
+    required Color color,
+    required String title,
+    bool isShowBorder = false,
+  }) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Container(
+          width: 12,
+          height: 12,
+          decoration: BoxDecoration(
+            color: !isShowBorder ? color : null,
+            shape: BoxShape.circle,
+            border: !isShowBorder ? null : Border.all(color: color, width: 2),
+          ),
+        ),
+        AppSizes.s8.horizontalGap,
+        Text(title, style: AppTextStyle.textSize14()),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        _buildItem(
+          color: AppColors.blackColor.withValues(alpha: .2),
+          isShowBorder: true,
+          title: 'Available',
+        ),
+        AppSizes.s8.horizontalGap,
+        _buildItem(
+          color: AppColors.blackColor.withValues(alpha: .2),
+          title: 'Booked',
+        ),
+        AppSizes.s8.horizontalGap,
+        _buildItem(color: AppColors.primaryColor, title: 'Selected'),
+      ],
+    );
+  }
+}
+
+// class DurationSlot extends StatelessWidget {
+//   const DurationSlot({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {}
+// }

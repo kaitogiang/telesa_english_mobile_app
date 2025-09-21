@@ -10,11 +10,19 @@ class CustomButton extends StatelessWidget {
     required this.label,
     this.onPressed,
     this.padding,
+    this.backgroundColor,
+    this.isShowBorder = false,
+    this.textColor,
+    this.borderRadius,
   });
 
   final String label;
   final VoidCallback? onPressed;
   final EdgeInsets? padding;
+  final Color? backgroundColor;
+  final bool isShowBorder;
+  final Color? textColor;
+  final double? borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +30,22 @@ class CustomButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(AppSizes.s4),
+          color: backgroundColor ?? AppColors.whiteColor,
+          borderRadius: BorderRadius.circular(borderRadius ?? AppSizes.s4),
+          border: !isShowBorder
+              ? null
+              : Border.all(
+                  width: 2,
+                  color: AppColors.blackColor.withValues(alpha: .2),
+                ),
         ),
         padding: AppSizes.s4.allPadding.copyWith(left: 8, right: 8),
-        child: Text(label, style: AppTextStyle.textSize14()),
+        child: Text(
+          label,
+          style: AppTextStyle.textSize14(
+            textColor: textColor ?? AppColors.blackColor,
+          ),
+        ),
       ),
     );
   }
