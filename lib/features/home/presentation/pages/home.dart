@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/constants/app_text_style.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/app_container.dart';
+import 'package:telesa_english_app/features/home/presentation/widgets/course_progress_card.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/home_header.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/custom_button.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/group_section.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
 class Home extends StatelessWidget {
@@ -16,6 +18,8 @@ class Home extends StatelessWidget {
         children: [
           HomeHeader(),
           DiscountBanner(title: 'Get discounts up to 45% for purchases today'),
+          AppSizes.s20.verticalGap,
+          GroupSection(title: 'Continue Learning', child: CourseProgressCard()),
         ],
       ),
     );

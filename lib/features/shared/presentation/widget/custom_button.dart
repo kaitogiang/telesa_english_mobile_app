@@ -14,6 +14,9 @@ class CustomButton extends StatelessWidget {
     this.isShowBorder = false,
     this.textColor,
     this.borderRadius,
+    this.width,
+    this.height,
+    this.textStyle,
   });
 
   final String label;
@@ -23,12 +26,18 @@ class CustomButton extends StatelessWidget {
   final bool isShowBorder;
   final Color? textColor;
   final double? borderRadius;
+  final double? width;
+  final double? height;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
+        width: width,
+        height: height,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: backgroundColor ?? AppColors.whiteColor,
           borderRadius: BorderRadius.circular(borderRadius ?? AppSizes.s4),
@@ -42,9 +51,11 @@ class CustomButton extends StatelessWidget {
         padding: AppSizes.s4.allPadding.copyWith(left: 8, right: 8),
         child: Text(
           label,
-          style: AppTextStyle.textSize14(
-            textColor: textColor ?? AppColors.blackColor,
-          ),
+          style:
+              textStyle ??
+              AppTextStyle.textSize14(
+                textColor: textColor ?? AppColors.blackColor,
+              ),
         ),
       ),
     );
