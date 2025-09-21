@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
+import 'package:telesa_english_app/core/network/mock_data.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/app_container.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/category_section.dart';
 import 'package:telesa_english_app/features/home/presentation/widgets/course_progress_card.dart';
@@ -94,7 +95,7 @@ class Home extends StatelessWidget {
               ),
               itemCount: 4,
               itemBuilder: (context, index) {
-                return TeacherInfoCard();
+                return TeacherInfoCard(teacherEntity: mockTeachers[index]);
               },
             ),
           ),

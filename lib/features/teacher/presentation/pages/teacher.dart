@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telesa_english_app/core/network/mock_data.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/custom_app_bar.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/teacher_info_card.dart';
 import 'package:telesa_english_app/features/teacher/presentation/widget/filter_section.dart';
@@ -17,9 +18,12 @@ class Teacher extends StatelessWidget {
             ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: 10,
+              itemCount: mockTeachers.length,
               itemBuilder: (context, index) {
-                return TeacherInfoCard(isHorizontal: true);
+                return TeacherInfoCard(
+                  isHorizontal: true,
+                  teacherEntity: mockTeachers[index],
+                );
               },
             ),
           ],

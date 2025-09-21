@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/core/constants/app_sizes.dart';
 import 'package:telesa_english_app/core/constants/app_text_style.dart';
-import 'package:telesa_english_app/core/constants/generated/assets.gen.dart';
 import 'package:telesa_english_app/core/extensions/color_extension.dart';
 import 'package:telesa_english_app/core/extensions/context_extension.dart';
 import 'package:telesa_english_app/core/extensions/double_extension.dart';
@@ -10,11 +9,17 @@ import 'package:telesa_english_app/core/extensions/string_extension.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/app_network_image.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/base_card.dart';
 import 'package:telesa_english_app/features/shared/presentation/widget/rating_with_action.dart';
+import 'package:telesa_english_app/features/teacher/domain/teacher_entity.dart';
 
 class TeacherInfoCard extends StatelessWidget {
-  const TeacherInfoCard({super.key, this.isHorizontal = false});
+  const TeacherInfoCard({
+    super.key,
+    this.isHorizontal = false,
+    this.teacherEntity,
+  });
 
   final bool isHorizontal;
+  final TeacherEntity? teacherEntity;
 
   TextStyle _titleStyle() {
     return AppTextStyle.textSize12(
@@ -33,14 +38,11 @@ class TeacherInfoCard extends StatelessWidget {
     );
   }
 
-  Widget _skillList(List<Map> skills) {
+  Widget _skillList(List<SkillEntity> skills) {
     return Wrap(
       runSpacing: AppSizes.s4,
       children: List<Widget>.generate(skills.length, (index) {
-        return _skillTag(
-          icon: skills[index]['icon'],
-          title: skills[index]['title'],
-        );
+        return _skillTag(icon: skills[index].icon, title: skills[index].title);
       }),
     );
   }
@@ -53,7 +55,7 @@ class TeacherInfoCard extends StatelessWidget {
           style: _titleStyle(),
           overflow: TextOverflow.ellipsis,
         ),
-        Expanded(child: Text('300.000'.formatCurrency())),
+        Expanded(child: Text('${teacherEntity?.price ?? 0}'.formatCurrency())),
       ],
     );
   }
@@ -62,15 +64,12 @@ class TeacherInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseCard(
       isHorizontal: isHorizontal,
-      header: AppNetworkImage(
-        url:
-            'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww',
-      ),
+      header: AppNetworkImage(url: teacherEntity?.imageUrl ?? ''),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Text(
-            'Minseo Kim',
+            teacherEntity?.name ?? '--',
             overflow: TextOverflow.ellipsis,
             style: AppTextStyle.textSize16(
               fontType: TextFontStyle.poppins,
@@ -86,7 +85,7 @@ class TeacherInfoCard extends StatelessWidget {
                   style: _titleStyle(),
                 ),
                 TextSpan(
-                  text: '5 years',
+                  text: teacherEntity?.experience ?? '0',
                   style: AppTextStyle.textSize12(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -97,58 +96,15 @@ class TeacherInfoCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text('${context.tr.skill}: ', style: _titleStyle()),
-              Expanded(
-                child: _skillList([
-                  {
-                    'icon': AppAssets.iconsBookIcon.svg(
-                      width: 15,
-                      colorFilter: ColorFilter.mode(
-                        AppColors.primaryColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    'title': context.tr.reading,
-                  },
-                  {
-                    'icon': AppAssets.iconsSpeakIcon.svg(
-                      width: 15,
-                      colorFilter: ColorFilter.mode(
-                        AppColors.primaryColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    'title': context.tr.speaking,
-                  },
-                  {
-                    'icon': AppAssets.iconsWriteIcon.svg(
-                      width: 15,
-                      colorFilter: ColorFilter.mode(
-                        AppColors.primaryColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    'title': context.tr.writing,
-                  },
-                  {
-                    'icon': AppAssets.iconsWriteIcon.svg(
-                      width: 15,
-                      colorFilter: ColorFilter.mode(
-                        AppColors.primaryColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    'title': context.tr.listening,
-                  },
-                ]),
-              ),
+              Expanded(child: _skillList(teacherEntity?.skills ?? [])),
             ],
           ),
           if (isHorizontal) AppSizes.s4.verticalGap,
           if (isHorizontal) _cast(context),
           AppSizes.s4.verticalGap,
           RatingWithAction(
-            ratingValue: '4.6',
-            ratingCount: '12',
+            ratingValue: '${teacherEntity?.ratingValue ?? 0}',
+            ratingCount: '${teacherEntity?.ratingCount ?? 0}',
             onAction: () {},
             actionButtonTitle: context.tr.bookNow,
           ),

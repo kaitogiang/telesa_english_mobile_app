@@ -1,16 +1,35 @@
-# telesa_english_app
+# Telesa English - Assignment (Demo)
 
-A new Flutter project.
+## Install & Run
 
-## Getting Started
+1. Clone repo
+2. Run `flutter pub get`
+3. Run `flutter run`
 
-This project is a starting point for a Flutter application.
+## What’s Done
 
-A few resources to get you started if this is your first Flutter project:
+- Mobile App (Flutter)
+    - Home screen UI (recommendations, progress overview)
+    - Teacher screen UI (list of teachers with static data)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## What’s Missing
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Booking screen
+- Progress tracking screen
+- Notifications
+- State management (Bloc/Provider not yet implemented)
+- API integration (currently using static mock data)
+- Admin Dashboard (Web/Laravel)
+
+## Next Steps (If more time)
+
+- Add missing screens (Booking, Progress, Notifications)
+- Implement Bloc for state management
+- Connect to Laravel API (stub)
+- Build Admin Dashboard for teachers, revenue, transactions
+- Add notification flow & booking confirmation
+
+## Notes
+
+This submission focuses on **UI prototyping** first.  
+The structure is ready for extending with Bloc and API integration.
