@@ -49,20 +49,33 @@ class Home extends StatelessWidget {
                   questionOnAction: () {},
                   timeOnAction: () {},
                 ),
-                AppSizes.s20.verticalGap,
-                CategorySection(
-                  headerTitle: 'English for Kids',
-                  onAction: () {},
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: List<Widget>.generate(4, (index) {
-                        return LessonCard(isShowLevelChip: false);
-                      }),
-                    ),
-                  ),
-                ),
               ],
+            ),
+          ),
+          AppSizes.s20.verticalGap,
+          CategorySection(
+            headerTitle: 'English for Kids',
+            onAction: () {},
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List<Widget>.generate(4, (index) {
+                  return LessonCard(isShowLevelChip: false);
+                }),
+              ),
+            ),
+          ),
+          AppSizes.s10.verticalGap,
+          CategorySection(
+            headerTitle: 'English Lessons for Adults',
+            onAction: () {},
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List<Widget>.generate(4, (index) {
+                  return LessonCard();
+                }),
+              ),
             ),
           ),
         ],
