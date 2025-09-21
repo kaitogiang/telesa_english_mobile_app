@@ -1,5 +1,6 @@
 class AppSizes {
   static const double px1 = 1.0;
+  static const double s2 = 2.0;
 
   // Extra Small
   static const double s4 = 4.0;

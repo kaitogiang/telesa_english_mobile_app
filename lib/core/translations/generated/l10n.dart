@@ -54,9 +54,14 @@ class AppTranslate {
     return Localizations.of<AppTranslate>(context, AppTranslate);
   }
 
-  /// `SoundX app`
+  /// `Telesa English app`
   String get appName {
-    return Intl.message('SoundX app', name: 'appName', desc: '', args: []);
+    return Intl.message(
+      'Telesa English app',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Hello`
@@ -344,6 +349,121 @@ class AppTranslate {
     return Intl.message(
       'We have sent an email that contains a link to reset your password',
       name: 'weHaveSentEmailWithLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience`
+  String get experience {
+    return Intl.message('Experience', name: 'experience', desc: '', args: []);
+  }
+
+  /// `Skill`
+  String get skill {
+    return Intl.message('Skill', name: 'skill', desc: '', args: []);
+  }
+
+  /// `Speaking`
+  String get speaking {
+    return Intl.message('Speaking', name: 'speaking', desc: '', args: []);
+  }
+
+  /// `Reading`
+  String get reading {
+    return Intl.message('Reading', name: 'reading', desc: '', args: []);
+  }
+
+  /// `Writing`
+  String get writing {
+    return Intl.message('Writing', name: 'writing', desc: '', args: []);
+  }
+
+  /// `Listening`
+  String get listening {
+    return Intl.message('Listening', name: 'listening', desc: '', args: []);
+  }
+
+  /// `Book now`
+  String get bookNow {
+    return Intl.message('Book now', name: 'bookNow', desc: '', args: []);
+  }
+
+  /// `Cast`
+  String get cast {
+    return Intl.message('Cast', name: 'cast', desc: '', args: []);
+  }
+
+  /// `See more`
+  String get seeMore {
+    return Intl.message('See more', name: 'seeMore', desc: '', args: []);
+  }
+
+  /// `English for Kids`
+  String get englishForKids {
+    return Intl.message(
+      'English for Kids',
+      name: 'englishForKids',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English lesson for Adults`
+  String get englishLessonForAdults {
+    return Intl.message(
+      'English lesson for Adults',
+      name: 'englishLessonForAdults',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorite Mentor`
+  String get favoriteMentor {
+    return Intl.message(
+      'Favorite Mentor',
+      name: 'favoriteMentor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get viewAll {
+    return Intl.message('View All', name: 'viewAll', desc: '', args: []);
+  }
+
+  /// `Your Score`
+  String get yourScore {
+    return Intl.message('Your Score', name: 'yourScore', desc: '', args: []);
+  }
+
+  /// `Quiz`
+  String get quiz {
+    return Intl.message('Quiz', name: 'quiz', desc: '', args: []);
+  }
+
+  /// `10 minutes`
+  String get minutes10 {
+    return Intl.message('10 minutes', name: 'minutes10', desc: '', args: []);
+  }
+
+  /// `10 questions`
+  String get questions10 {
+    return Intl.message(
+      '10 questions',
+      name: 'questions10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Word Puzzles & Vocabulary`
+  String get wordPuzzle {
+    return Intl.message(
+      'Word Puzzles & Vocabulary',
+      name: 'wordPuzzle',
       desc: '',
       args: [],
     );

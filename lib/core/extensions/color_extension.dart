@@ -6,4 +6,8 @@ extension ColorExtension on Color {
   Color toDarker([double amount = .1]) {
     return AppColors.darken(this, amount);
   }
+
+  Color toLighter([double amount = .1]) {
+    return AppColors.lighten(this, amount);
+  }
 }

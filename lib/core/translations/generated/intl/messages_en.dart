@@ -26,9 +26,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "agreeString": MessageLookupByLibrary.simpleMessage("I agree to the "),
     "andString": MessageLookupByLibrary.simpleMessage(" and "),
-    "appName": MessageLookupByLibrary.simpleMessage("SoundX app"),
+    "appName": MessageLookupByLibrary.simpleMessage("Telesa English app"),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
+    "bookNow": MessageLookupByLibrary.simpleMessage("Book now"),
     "cancelButton": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "cast": MessageLookupByLibrary.simpleMessage("Cast"),
     "checkYourEmailTitle": MessageLookupByLibrary.simpleMessage(
       "Check your mail",
     ),
@@ -37,7 +39,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "createYourAccount": MessageLookupByLibrary.simpleMessage(
       "Create your Account",
     ),
+    "englishForKids": MessageLookupByLibrary.simpleMessage("English for Kids"),
     "englishLanguage": MessageLookupByLibrary.simpleMessage("English"),
+    "englishLessonForAdults": MessageLookupByLibrary.simpleMessage(
+      "English lesson for Adults",
+    ),
+    "experience": MessageLookupByLibrary.simpleMessage("Experience"),
+    "favoriteMentor": MessageLookupByLibrary.simpleMessage("Favorite Mentor"),
     "fieldIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "This field cannot be empty.",
     ),
@@ -50,11 +58,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "Invalid email format.",
     ),
+    "listening": MessageLookupByLibrary.simpleMessage("Listening"),
     "loginEmailHintText": MessageLookupByLibrary.simpleMessage("Email"),
     "loginPasswordHintText": MessageLookupByLibrary.simpleMessage("Password"),
     "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Login With Google",
     ),
+    "minutes10": MessageLookupByLibrary.simpleMessage("10 minutes"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "pageLoginButtonTitle": MessageLookupByLibrary.simpleMessage("Login"),
     "pageRegisterButtonTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
@@ -68,18 +78,30 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please check your email.",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "questions10": MessageLookupByLibrary.simpleMessage("10 questions"),
+    "quiz": MessageLookupByLibrary.simpleMessage("Quiz"),
+    "reading": MessageLookupByLibrary.simpleMessage("Reading"),
     "resetYourPassword": MessageLookupByLibrary.simpleMessage(
       "Reset your password",
     ),
+    "seeMore": MessageLookupByLibrary.simpleMessage("See more"),
     "signedUpName": MessageLookupByLibrary.simpleMessage("Name"),
+    "skill": MessageLookupByLibrary.simpleMessage("Skill"),
     "somethingWrong": MessageLookupByLibrary.simpleMessage(
       "An error occurred. Please try again.",
     ),
+    "speaking": MessageLookupByLibrary.simpleMessage("Speaking"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "vietnameseLanguage": MessageLookupByLibrary.simpleMessage("Vietnamese"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
     "weHaveSentEmailWithLink": MessageLookupByLibrary.simpleMessage(
       "We have sent an email that contains a link to reset your password",
     ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to my app"),
+    "wordPuzzle": MessageLookupByLibrary.simpleMessage(
+      "Word Puzzles & Vocabulary",
+    ),
+    "writing": MessageLookupByLibrary.simpleMessage("Writing"),
+    "yourScore": MessageLookupByLibrary.simpleMessage("Your Score"),
   };
 }

@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appName": "SoundX app",
+  "appName": "Telesa English app",
   "hello": "Hello",
   "welcome": "Welcome to my app",
   "@hello": {
@@ -52,5 +52,23 @@
   "backToLogin": "Back to Login",
   "checkYourEmailTitle": "Check your mail",
   "pleaseCheckYourMail": "Please check your email.",
-  "weHaveSentEmailWithLink": "We have sent an email that contains a link to reset your password"
+  "weHaveSentEmailWithLink": "We have sent an email that contains a link to reset your password",
+  "experience": "Experience",
+  "skill": "Skill",
+  "speaking": "Speaking",
+  "reading": "Reading",
+  "writing": "Writing",
+  "listening": "Listening",
+  "bookNow": "Book now",
+  "cast": "Cast",
+  "seeMore": "See more",
+  "englishForKids": "English for Kids",
+  "englishLessonForAdults": "English lesson for Adults",
+  "favoriteMentor": "Favorite Mentor",
+  "viewAll": "View All",
+  "yourScore": "Your Score",
+  "quiz": "Quiz",
+  "minutes10": "10 minutes",
+  "questions10": "10 questions",
+  "wordPuzzle": "Word Puzzles & Vocabulary"
 }

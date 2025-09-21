@@ -47,6 +47,21 @@ class AppAssets {
     'assets/icons/clock_icon.svg',
   );
 
+  /// File path: assets/icons/clock_outline_icon.svg
+  static const SvgGenImage iconsClockOutlineIcon = SvgGenImage(
+    'assets/icons/clock_outline_icon.svg',
+  );
+
+  /// File path: assets/icons/dropdown_arrow_icon.svg
+  static const SvgGenImage iconsDropdownArrowIcon = SvgGenImage(
+    'assets/icons/dropdown_arrow_icon.svg',
+  );
+
+  /// File path: assets/icons/error_icon.svg
+  static const SvgGenImage iconsErrorIcon = SvgGenImage(
+    'assets/icons/error_icon.svg',
+  );
+
   /// File path: assets/icons/filled_star_icon.svg
   static const SvgGenImage iconsFilledStarIcon = SvgGenImage(
     'assets/icons/filled_star_icon.svg',
@@ -70,6 +85,11 @@ class AppAssets {
   /// File path: assets/icons/graduation_icon.svg
   static const SvgGenImage iconsGraduationIcon = SvgGenImage(
     'assets/icons/graduation_icon.svg',
+  );
+
+  /// File path: assets/icons/left_arrow_icon.svg
+  static const SvgGenImage iconsLeftArrowIcon = SvgGenImage(
+    'assets/icons/left_arrow_icon.svg',
   );
 
   /// File path: assets/icons/mdi_eye.svg
@@ -135,6 +155,16 @@ class AppAssets {
   /// File path: assets/png/check.png
   static const AssetGenImage pngCheck = AssetGenImage('assets/png/check.png');
 
+  /// File path: assets/png/hum_book_image.png
+  static const AssetGenImage pngHumBookImage = AssetGenImage(
+    'assets/png/hum_book_image.png',
+  );
+
+  /// File path: assets/png/human_image.png
+  static const AssetGenImage pngHumanImage = AssetGenImage(
+    'assets/png/human_image.png',
+  );
+
   /// File path: assets/png/soundx_logo.png
   static const AssetGenImage pngSoundxLogo = AssetGenImage(
     'assets/png/soundx_logo.png',
@@ -158,11 +188,15 @@ class AppAssets {
     iconsCheckCircleIcon,
     iconsCircleIcon,
     iconsClockIcon,
+    iconsClockOutlineIcon,
+    iconsDropdownArrowIcon,
+    iconsErrorIcon,
     iconsFilledStarIcon,
     iconsFilterIcon,
     iconsFireIcon,
     iconsGoogleIcon,
     iconsGraduationIcon,
+    iconsLeftArrowIcon,
     iconsMdiEye,
     iconsMdiHide,
     iconsPuzzleIcon,
@@ -176,6 +210,8 @@ class AppAssets {
     iconsVerifyIcon,
     iconsWriteIcon,
     pngCheck,
+    pngHumBookImage,
+    pngHumanImage,
     pngSoundxLogo,
     pngUkFlag,
     pngVietnamFlag,

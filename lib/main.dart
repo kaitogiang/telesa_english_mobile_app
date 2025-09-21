@@ -59,6 +59,31 @@ class _MyAppView extends WidgetView<MyApp, _MyAppState> {
         locale: state._locale,
         routerConfig: goRouterConfig,
       ),
+      // child: MaterialApp(
+      //   localizationsDelegates: const [
+      //     AppTranslate.delegate,
+      //     GlobalMaterialLocalizations.delegate,
+      //     GlobalWidgetsLocalizations.delegate,
+      //     GlobalCupertinoLocalizations.delegate,
+      //   ],
+      //   supportedLocales: AppTranslate.delegate.supportedLocales,
+      //   locale: state._locale,
+      //   home: AnnotatedRegion<SystemUiOverlayStyle>(
+      //     value: SystemUiOverlayStyle(
+      //       statusBarColor: Colors.white,
+      //       statusBarIconBrightness: Brightness.dark,
+      //     ),
+      //     child: Scaffold(
+      //       backgroundColor: AppColors.whiteColor,
+      //       body: SafeArea(
+      //         child: Padding(
+      //           padding: AppSizes.s8.horizontalPadding,
+      //           child: Home(),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
