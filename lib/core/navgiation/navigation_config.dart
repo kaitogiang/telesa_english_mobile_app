@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:telesa_english_app/core/config/app_event_bus.dart';
 import 'package:telesa_english_app/core/events/unfocus_keyboard_event.dart';
-import 'package:telesa_english_app/features/home/presentation/widgets/app_container.dart';
+import 'package:telesa_english_app/features/home/presentation/pages/home.dart';
 import 'package:telesa_english_app/features/shared/presentation/base/main_app_wrapper.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -22,25 +22,7 @@ final goRouterConfig = GoRouter(
           path: '/home',
           name: 'home',
           builder: (context, state) {
-            return Scaffold(
-              body: SafeArea(
-                child: Container(
-                  color: Colors.green,
-                  height: 200,
-                  margin: EdgeInsets.only(top: 100),
-                  padding: EdgeInsets.all(10),
-                  constraints: BoxConstraints(minWidth: double.infinity),
-                  child: AppContainer(
-                    isLinearGradient: true,
-                    child: Container(
-                      // color: Colors.blue,
-                      width: double.infinity,
-                      height: double.infinity,
-                    ),
-                  ),
-                ),
-              ),
-            );
+            return Home();
           },
         ),
       ],
