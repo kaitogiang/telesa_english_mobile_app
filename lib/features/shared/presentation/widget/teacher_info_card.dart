@@ -17,7 +17,7 @@ class TeacherInfoCard extends StatelessWidget {
   final bool isHorizontal;
 
   TextStyle _titleStyle() {
-    return AppTextStyle.textSize14(
+    return AppTextStyle.textSize12(
       textColor: AppColors.grey.toDarker(.2),
       fontWeight: FontWeight.w600,
     );
@@ -28,7 +28,7 @@ class TeacherInfoCard extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         icon,
-        Text(title, style: AppTextStyle.textSize12()),
+        Text('$title ', style: AppTextStyle.textSize10()),
       ],
     );
   }
@@ -87,7 +87,7 @@ class TeacherInfoCard extends StatelessWidget {
                 ),
                 TextSpan(
                   text: '5 years',
-                  style: AppTextStyle.textSize16(fontWeight: FontWeight.bold),
+                  style: AppTextStyle.textSize12(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -101,7 +101,7 @@ class TeacherInfoCard extends StatelessWidget {
                 child: _skillList([
                   {
                     'icon': AppAssets.iconsBookIcon.svg(
-                      width: 20,
+                      width: 15,
                       colorFilter: ColorFilter.mode(
                         AppColors.primaryColor,
                         BlendMode.srcIn,
@@ -111,7 +111,7 @@ class TeacherInfoCard extends StatelessWidget {
                   },
                   {
                     'icon': AppAssets.iconsSpeakIcon.svg(
-                      width: 20,
+                      width: 15,
                       colorFilter: ColorFilter.mode(
                         AppColors.primaryColor,
                         BlendMode.srcIn,
@@ -121,13 +121,23 @@ class TeacherInfoCard extends StatelessWidget {
                   },
                   {
                     'icon': AppAssets.iconsWriteIcon.svg(
-                      width: 20,
+                      width: 15,
                       colorFilter: ColorFilter.mode(
                         AppColors.primaryColor,
                         BlendMode.srcIn,
                       ),
                     ),
                     'title': context.tr.writing,
+                  },
+                  {
+                    'icon': AppAssets.iconsWriteIcon.svg(
+                      width: 15,
+                      colorFilter: ColorFilter.mode(
+                        AppColors.primaryColor,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    'title': context.tr.listening,
                   },
                 ]),
               ),
