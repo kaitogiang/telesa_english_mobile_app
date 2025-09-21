@@ -59,7 +59,7 @@ class _CustomFilterView extends WidgetView<CustomFilter, _CustomFilterState> {
                   border: Border.all(color: AppColors.grey),
                   borderRadius: BorderRadius.circular(AppSizes.s8),
                 ),
-                padding: AppSizes.s4.allPadding.copyWith(right: 30),
+                padding: AppSizes.px1.allPadding.copyWith(right: 30),
                 child: ValueListenableBuilder(
                   valueListenable: state.value,
                   builder: (context, hintValue, child) {
