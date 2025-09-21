@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:overlay_notification/overlay_notification.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
 import 'package:telesa_english_app/features/shared/presentation/base/widget_view.dart';
-import 'package:telesa_english_app/features/teacher/presentation/widget/custom_filter.dart';
+import 'package:telesa_english_app/features/shared/presentation/widget/book_teacher_dialog.dart';
 import 'package:telesa_english_app/telesa_english.dart';
 
 void main() {
@@ -67,16 +67,7 @@ class _MyAppView extends WidgetView<MyApp, _MyAppState> {
         ],
         supportedLocales: AppTranslate.delegate.supportedLocales,
         locale: state._locale,
-        home: Scaffold(
-          body: SafeArea(
-            child: CustomFilter(
-              options: ['Beginner', 'Intermediate', 'Advanced', 'Expert'],
-              // customAction: (valueNotifier) {
-              //   valueNotifier.value = 'Haha';
-              // },
-            ),
-          ),
-        ),
+        home: Scaffold(body: SafeArea(child: BookTeacherDialog())),
       ),
     );
   }
