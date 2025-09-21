@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:telesa_english_app/core/config/app_event_bus.dart';
 import 'package:telesa_english_app/core/constants/app_color.dart';
@@ -58,6 +59,22 @@ class _MainAppWrapperState extends State<MainAppWrapper> {
     setState(() {
       _currentIndex = index;
     });
+    _performNavigation(index);
+  }
+
+  void _performNavigation(int index) {
+    switch (index) {
+      case 0:
+        return context.goNamed('home');
+      case 1:
+        return;
+      case 2:
+        return context.goNamed('teacher');
+      case 3:
+        return;
+      case 4:
+        return;
+    }
   }
 
   @override

@@ -87,6 +87,11 @@ class AppAssets {
     'assets/icons/graduation_icon.svg',
   );
 
+  /// File path: assets/icons/left_arrow_icon.svg
+  static const SvgGenImage iconsLeftArrowIcon = SvgGenImage(
+    'assets/icons/left_arrow_icon.svg',
+  );
+
   /// File path: assets/icons/mdi_eye.svg
   static const SvgGenImage iconsMdiEye = SvgGenImage(
     'assets/icons/mdi_eye.svg',
@@ -191,6 +196,7 @@ class AppAssets {
     iconsFireIcon,
     iconsGoogleIcon,
     iconsGraduationIcon,
+    iconsLeftArrowIcon,
     iconsMdiEye,
     iconsMdiHide,
     iconsPuzzleIcon,

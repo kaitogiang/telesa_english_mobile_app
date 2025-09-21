@@ -4,6 +4,7 @@ import 'package:telesa_english_app/core/config/app_event_bus.dart';
 import 'package:telesa_english_app/core/events/unfocus_keyboard_event.dart';
 import 'package:telesa_english_app/features/home/presentation/pages/home.dart';
 import 'package:telesa_english_app/features/shared/presentation/base/main_app_wrapper.dart';
+import 'package:telesa_english_app/features/teacher/presentation/pages/teacher.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final mainNavigatorKey = GlobalKey<NavigatorState>();
@@ -23,6 +24,13 @@ final goRouterConfig = GoRouter(
           name: 'home',
           builder: (context, state) {
             return Home();
+          },
+        ),
+        GoRoute(
+          path: '/teacher',
+          name: 'teacher',
+          builder: (context, state) {
+            return Teacher();
           },
         ),
       ],
